@@ -6,16 +6,18 @@ const Validator = function (id, errorSpan, type) {
 
   this.init = function () {
     input.addEventListener("input", function () {
+      input.classList.remove("active");
       if (type != "validpassword") {
         if (input.validity.valid) {
           error.innerHTML = "";
         } else {
           obj.showError();
+          input.classList.add("active");
         }
         if (type == "password") {
           let validpassword = document.getElementById("validpassword");
           let error = document.getElementById("validpasswordspan");
-          if (validpassword.value != input.value) {
+          if (validpassword.value != input.value && validpassword.value != "") {
             error.textContent = "The passwords don't match.";
           } else {
             error.textContent = "";

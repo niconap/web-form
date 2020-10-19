@@ -8,31 +8,46 @@
 </head>
 <body>
   <form>
-    <label for="email">
-      <span>E-Mail Address:</span>
-      <input id="email" type="email" required>
-      <span class="error" id="emailspan" aria-live="polite"></span>
-    </label>
-    <label for="country">
-      <span>Country:</span>
-      <input id="country" type="text" required minlength="3" maxlength="20">
-      <span class="error" id="countryspan" aria-live="polite"></span>
-    </label>
-    <label for="zipcode">
-      <span>Zipcode:</span>
-      <input id="zipcode" type="text" required pattern="[0-9]*" maxlength="10" minlength="3">
-      <span class="error" id="zipcodespan" aria-live="polite"></span>
-    </label>
-    <label for="password">
-      <span>Password:</span>
-      <input id="password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> 
-      <span class="error" id="passwordspan" aria-live="polite"></span>
-    </label>
-    <label for="validpassword">
-      <span>Confirm your password:</span>
-      <input id="validpassword" type="password" required>
-      <span class="error" id="validpasswordspan" aria-live="polite"></span>
-    </label>
+    <div>
+      <label for="email" class="item"">
+        <span>E-Mail Address:</span>
+        <input id="email" type="email" required>
+        <br>
+        <span class="error" id="emailspan" aria-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="country" class="item">
+        <span>Country:</span>
+        <input id="country" type="text" required minlength="3" maxlength="20">
+        <br>
+        <span class="error" id="countryspan" aria-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="zipcode" class="item">
+        <span>Zipcode:</span>
+        <input id="zipcode" type="text" required pattern="[0-9]*" maxlength="10" minlength="3">
+        <br>
+        <span class="error" id="zipcodespan" aria-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="password" class="item">
+        <span>Password:</span>
+        <input id="password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> 
+        <br>
+        <span class="error" id="passwordspan" aria-live="polite"></span>
+      </label>
+    </div>
+    <div>
+      <label for="validpassword" class="item">
+        <span>Confirm your password:</span>
+        <input id="validpassword" type="password" required>
+        <br>
+        <span class="error" id="validpasswordspan" aria-live="polite"></span>
+      </label>
+    </div>
     <button id="submit">Submit</button>
   </form>
   <script src="scripts.js"></script>

@@ -1,3 +1,23 @@
 * {
   outline: none;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  width: 200px;
+  margin-top: 200px;
+}
+
+.active {
+  border: 1px solid red;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
 }
