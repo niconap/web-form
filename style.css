@@ -7,14 +7,48 @@
 form {
   width: 200px;
   margin-top: 200px;
+  text-align: center;
+}
+
+button {
+  border: 3px solid lightblue;
+  background-color: white;
+  color: lightblue;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 50px;
+  transition: color 0.2s ease 0s;
+  transition: padding 0.2s ease 0s;
+}
+
+div input {
+  border: 3px solid lightblue;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.item {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+  padding: 7px;
+}
+
+button:active {
+  color: white;
+  background-color: lightblue;
 }
 
 .active {
-  border: 1px solid red;
+  border: 3px solid red;
 }
 
 div {
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .error {
