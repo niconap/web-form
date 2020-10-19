@@ -1,0 +1,8 @@
+* {
+  outline: none;
+}
+
+#email:invalid {
+  border: solid 1px red;
+  background: lightcoral;
+}
