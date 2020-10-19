@@ -19,6 +19,7 @@ const Validator = function (id, errorSpan, type) {
           let error = document.getElementById("validpasswordspan");
           if (validpassword.value != input.value && validpassword.value != "") {
             error.textContent = "The passwords don't match.";
+            input.classList.add("active");
           } else {
             error.textContent = "";
           }
@@ -27,6 +28,7 @@ const Validator = function (id, errorSpan, type) {
         let password = document.getElementById("password");
         if (password.value != input.value) {
           error.textContent = "The passwords don't match.";
+          input.classList.add("active");
         } else {
           error.textContent = "";
         }
