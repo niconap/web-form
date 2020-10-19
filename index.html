@@ -8,16 +8,31 @@
 </head>
 <body>
   <form>
-    <label for="email">E-Mail Address:</label>
-    <input id="email" type="email">
-    <label for="country">Country:</label>
-    <input id="country" type="text">
-    <label for="zipcode">Zipcode:</label>
-    <input id="zipcode" type="number">
-    <label for="password">Password:</label>
-    <input id="password" type="password">
-    <label for="validpassword">Confirm your password:</label>
-    <input id="validpassword" type="password">
+    <label for="email">
+      <span>E-Mail Address:</span>
+      <input id="email" type="email">
+      <span class="error" id="emailspan" aria-live="polite"></span>
+    </label>
+    <label for="country">
+      <span>Country:</span>
+      <input id="country" type="text">
+      <span class="error" id="countryspan" aria-live="polite"></span>
+    </label>
+    <label for="zipcode">
+      <span>Zipcode:</span>
+      <input id="zipcode" type="number">
+      <span class="error" id="zipcodespan" aria-live="polite"></span>
+    </label>
+    <label for="password">
+      <span>Password:</span>
+      <input id="password" type="password">
+      <span class="error" id="passwordspan" aria-live="polite"></span>
+    </label>
+    <label for="validpassword">
+      <span>Confirm your password:</span>
+      <input id="validpassword" type="password">
+      <span class="error" id="passwordconfirmspan" aria-live="polite"></span>
+    </label>
     <button id="submit">Submit</button>
   </form>
   <script src="scripts.js"></script>
