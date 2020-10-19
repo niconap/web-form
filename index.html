@@ -10,27 +10,27 @@
   <form>
     <label for="email">
       <span>E-Mail Address:</span>
-      <input id="email" type="email">
+      <input id="email" type="email" required>
       <span class="error" id="emailspan" aria-live="polite"></span>
     </label>
     <label for="country">
       <span>Country:</span>
-      <input id="country" type="text">
+      <input id="country" type="text" required minlength="3" maxlength="20">
       <span class="error" id="countryspan" aria-live="polite"></span>
     </label>
     <label for="zipcode">
       <span>Zipcode:</span>
-      <input id="zipcode" type="number">
+      <input id="zipcode" type="text" required pattern="[0-9]*" maxlength="10" minlength="3">
       <span class="error" id="zipcodespan" aria-live="polite"></span>
     </label>
     <label for="password">
       <span>Password:</span>
-      <input id="password" type="password">
+      <input id="password" type="password" required>
       <span class="error" id="passwordspan" aria-live="polite"></span>
     </label>
     <label for="validpassword">
       <span>Confirm your password:</span>
-      <input id="validpassword" type="password">
+      <input id="validpassword" type="password" required>
       <span class="error" id="passwordconfirmspan" aria-live="polite"></span>
     </label>
     <button id="submit">Submit</button>
