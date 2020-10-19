@@ -6,10 +6,28 @@ const Validator = function (id, errorSpan, type) {
 
   this.init = function () {
     input.addEventListener("input", function () {
-      if (input.validity.valid) {
-        error.innerHTML = "";
+      if (type != "validpassword") {
+        if (input.validity.valid) {
+          error.innerHTML = "";
+        } else {
+          obj.showError();
+        }
+        if (type == "password") {
+          let validpassword = document.getElementById("validpassword");
+          let error = document.getElementById("validpasswordspan");
+          if (validpassword.value != input.value) {
+            error.textContent = "The passwords don't match.";
+          } else {
+            error.textContent = "";
+          }
+        }
       } else {
-        obj.showError();
+        let password = document.getElementById("password");
+        if (password.value != input.value) {
+          error.textContent = "The passwords don't match.";
+        } else {
+          error.textContent = "";
+        }
       }
     });
   };
@@ -39,6 +57,13 @@ const Validator = function (id, errorSpan, type) {
       } else if (input.validity.tooShort) {
         error.textContent = "Please enter more than 3 characters.";
       }
+    } else if (inputtype == "password") {
+      if (input.validity.patternMismatch) {
+        error.textContent =
+          "Must contain at least one number, one uppercase and lowercase letter and at least 8 or more characters.";
+      } else if (input.validity.valueMissing) {
+        error.textContent = "Please enter a password.";
+      }
     }
   };
 };
@@ -51,3 +76,13 @@ country.init();
 
 let zipcode = new Validator("zipcode", "zipcodespan", "zipcode");
 zipcode.init();
+
+let password = new Validator("password", "passwordspan", "password");
+password.init();
+
+let validpassword = new Validator(
+  "validpassword",
+  "validpasswordspan",
+  "validpassword"
+);
+validpassword.init();

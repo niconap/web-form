@@ -25,13 +25,13 @@
     </label>
     <label for="password">
       <span>Password:</span>
-      <input id="password" type="password" required>
+      <input id="password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> 
       <span class="error" id="passwordspan" aria-live="polite"></span>
     </label>
     <label for="validpassword">
       <span>Confirm your password:</span>
       <input id="validpassword" type="password" required>
-      <span class="error" id="passwordconfirmspan" aria-live="polite"></span>
+      <span class="error" id="validpasswordspan" aria-live="polite"></span>
     </label>
     <button id="submit">Submit</button>
   </form>
